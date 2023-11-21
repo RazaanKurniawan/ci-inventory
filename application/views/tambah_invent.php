@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Edit Siswa</title>
+    <title>Tambah Siswa</title>
   </head>
 
   <body>
@@ -14,28 +14,32 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header">
-              EDIT SISWA
+              TAMBAH BARANG
             </div>
             <div class="card-body">
-              <form action="<?php echo base_url() ?>index.php/siswa/update" method="POST">
+              <form action="<?php echo base_url() ?>index.php/invent/simpan" method="POST">
                 
                 <div class="form-group">
-                  <label>NISN</label>
-                  <input type="text" name="nisn" value="<?php echo $data_siswa->nisn ?>" placeholder="Masukkan NISN Siswa" class="form-control">
-                  <input type="hidden" name="id_siswa" value="<?php echo $data_siswa->id_siswa ?>">
+                  <label>Kode Barang</label>
+                  <input type="text" name="kode_barang" placeholder="Masukkan Kode Barang" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>Nama Lengkap</label>
-                  <input type="text" name="nama_lengkap" value="<?php echo $data_siswa->nama_lengkap ?>" placeholder="Masukkan Nama Siswa" class="form-control">
+                  <label>Nama Barang</label>
+                  <input type="text" name="nama_barang" placeholder="Masukkan Nama Barang" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>Alamat</label>
-                  <textarea class="form-control" name="alamat" placeholder="Masukkan Alamat Siswa" rows="4"><?php echo $data_siswa->alamat ?></textarea>
+                  <label>Quantity</label>
+                  <input type="text" class="form-control" name="qty" placeholder="Masukkan Quantity Barang" rows="4"></input>
+                </div>
+
+                <div class="form-group">
+                  <label>Harga Satuan</label>
+                  <input type="text" class="form-control" name="harga_satuan" placeholder="Masukkan Harga" rows="4"></input>
                 </div>
                 
-                <button type="submit" class="btn btn-success">UPDATE</button>
+                <button type="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
 
               </form>
