@@ -22,7 +22,7 @@
                 <div class="form-group">
                   <label>Kode Barang</label>
                   <input type="text" name="kode_barang" value="<?php echo $data_invent->kode_barang ?>" placeholder="Masukkan Kode Barang" class="form-control">
-                  <input type="hidden" name="id_siswa" value="<?php echo $data_invent->id_barang ?>">
+                  <input type="hidden" name="id_barang" value="<?php echo $data_invent->id_barang ?>">
                 </div>
 
                 <div class="form-group">

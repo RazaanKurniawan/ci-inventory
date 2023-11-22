@@ -79,24 +79,24 @@ public function update()
    );
 
    //update via model    
-   $this->m_invent->update_invent($data, $id_barang);
+   $this->m_invent->update_barang($data, $id_barang);
 
    //redirect ke controller siswa
    redirect('invent');
 }
-public function hapus($id_siswa)
+public function hapus($id_barang)
 {
   //load model
-  $this->load->model('m_siswa');
+  $this->load->model('m_invent');
 
    //get ID dari URL segment ke 3
-   $id['id_siswa'] = $this->uri->segment(3);
+   $id['id_barang'] = $this->uri->segment(3);
 
    //delete via model
-   $this->m_siswa->hapus_siswa($id);
+   $this->m_invent->hapus_barang($id);
 
    //redirect ke controller siswa
-   redirect('siswa');
+   redirect('invent');
 
 }
 }

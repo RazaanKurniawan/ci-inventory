@@ -22,14 +22,14 @@ public function edit_invent($id_barang)
     $query = $this->db->where("id_barang", $id_barang)->get("tbl_inventory");
     return $query->row();
 }
-public function update_invent($data, $id_barang)
+public function update_barang($data, $id_barang)
 {
    //update siswa
    return $this->db->update("tbl_inventory", $data, $id_barang);
 }
-public function hapus_siswa($id)
+public function hapus_barang($id)
 {
    //hapus siswa
-   return $this->db->delete("tbl_siswa", $id);
+   return $this->db->delete("tbl_inventory", $id);
 }
 }
